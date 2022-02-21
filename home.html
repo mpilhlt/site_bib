@@ -1,0 +1,312 @@
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<style>
+
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+
+$theme-colors: (
+  danger: $purple
+);
+
+mark.red {
+    color:#ff0000;
+    background: none;
+}
+
+.main-header .navbar {
+    margin-left: 400px;
+}
+
+.main-header .logo {
+    width: 400px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+                            .navbar-nav {
+                           float: none !important;
+                           }
+                           
+                            .navbar-nav > li:nth-child(8) {
+                           float: right;
+                           
+                            }
+                           
+                            .navbar-nav > li:nth-child(7) {
+                           display: none;
+
+                           
+                           }
+                           
+                             .navbar-nav > li:nth-child(10) {
+                           display: none;
+
+                           
+                           }
+                           
+                           .dataTables_filter {
+                            visibility: hidden;
+                           }
+                            
+                            .btn-link {
+                              font-weight: 400;
+                              color: #377a3a;
+                                text-decoration: underline;
+                            }
+                            .btn-link:hover {
+  color: #377a3a;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 0.9rem;
+  color: #377a3a;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+.dataTables_scrollBody {
+    transform:rotateX(180deg);
+}
+.dataTables_scrollBody table {
+    transform:rotateX(180deg);
+}
+
+
+.resources {
+  float: left;
+  width: 250px;
+  shape-outside: url(assets_app/img/IMG_0037.jpg);
+  shape-margin: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.challenges {
+  float: left;
+  width: 250px;
+  shape-outside: url(assets_app/img/IMG_9650.jpg);
+  shape-margin: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.Database {
+  float: left;
+  width: 250px;
+  shape-outside: url(assets_app/img/database.jpg);
+  shape-margin: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.Keywords {
+  float: left;
+  width: 250px;
+  shape-outside: url(assets_app/img/network.png);
+  shape-margin: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.Guide {
+  float: left;
+  width: 250px;
+  shape-outside: url(assets_app/img/IMG_9650.jpg);
+  shape-margin: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+}
+
+                   .prova {
+              background: #FF0000 !important;
+              color: white !important;
+              opacity: 0.5;
+              font-size:12px;
+           },
+                
+                  .prova-2 {
+              background: #FF0000 !important;
+              color: green !important;
+              opacity: 0.5;
+              font-size:12px;
+           }, 
+                      
+                  .citation {
+              background: #403121 !important;
+              color: white !important;
+              opacity: 0.5;
+              font-size:12px;
+           }
+               .btn-link {
+ font-weight: 300 !important;
+ color: white !important;
+  background-color: transparent;    
+               }  
+          .prova {
+              background: #FF0000 !important;
+              color: white !important;
+              opacity: 0.5;
+              font-size:12px;
+           },
+                
+                  .prova-2 {
+              background: #FF0000 !important;
+              color: green !important;
+              opacity: 0.5;
+              font-size:12px;
+           }, 
+                      
+                  .citation {
+              background: #403121 !important;
+              color: white !important;
+              opacity: 0.5;
+              font-size:12px;
+           }
+               .btn-link {
+ font-weight: 300 !important;
+ color: white !important;
+  background-color: transparent;    
+               }  
+                   
+                   
+                 
+
+/* finally, import Bootstrap */
+@import "bootstrap";
+
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+</style>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+  <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="https://sun9-33.userapi.com/8ZATnlFNPbhbLJ6PLAY2K4Cbav_-YavzNgT5Vg/TQd489HzGzs.jpg" alt="1">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1 class="mat-display-3">Explore the Database</h1>
+          <p class="fit-text">Search among more than 3.300 items and 150 categories</p>
+          <p>
+            <a class="btn btn-lg btn-danger" onclick="$('li:eq(3) a').tab('show');" role="button">Search now</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="https://sun9-46.userapi.com/19JhcxL17uObBBB0BiDAdRqDwWWpDGBdPuZH1A/lteattNJO7Y.jpg" alt="2"> 
+      <div class="container">
+  <div class="carousel-caption">
+    <h1 class="fit-head">Visualize your results</h1>
+    <p class="fit-text">Build graphs</p>
+    <a class="btn btn-lg btn-danger" onclick="$('li:eq(4) a').tab('show');" role="button">Visualize now</a>
+    <!-- <p>
+      <form>
+        <div class="form-group">
+          <input id="addr1" type="text" class="form-control" placeholder="Search now...">
+          <input id="addr2" type="text" class="form-control" placeholder="Search now...">
+        </div>
+      </form>
+    </p> -->
+  </div>
+      </div>
+    </div>
+        <div class="item">
+      <img src="https://sun9-49.userapi.com/0UK_FeUvehVTrRMJG43LXkN6uUo2_iCPBPK8Lg/5TCxW9LPmqU.jpg" alt="3">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1 class="fit-head">Are you also working on the Congregation of the Council?</h1>
+          <p class="fit-text">Send us your contribution to enrich the database</p>
+          <p>
+            <a class="btn btn-lg btn-danger" onclick="$('li:eq(5) a').tab('show');" role="button">Fill a form</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+<!-- /.carousel -->
+<hr>
+
+       <div class="container">
+   <div class="row">
+  <div class="col-xs-2"></div>
+  <div>
+  <h1 class="col-xs-8 text-center">SCC Resource Explorer</h1>
+  </div> 
+</div>
+</div>
+      <hr/>
+      <div id="about" class="about top_layer">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <p><b><mark class="red">SCC Resource Explorer</mark></b> is an online interactive bibliographic database that offers the possibility of approaching the history of the Congregation of the Council  through archival material, works of juridical doctrine and specialist scientific literature published between the 16th century and today. </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      
+      
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-12">
+          <h2>Database</h2>
+          <p>The catalogue contains the bibliography, related to a wide spectrum of the Congregation of the Council activities. It is ongoing project.
+</p>
+ <a class="btn btn-warning" onclick="$('li:eq(1) a').tab('show');" role="button">Read more</a>        
+ </div>
+        <div class="col-lg-3 col-md-6 col-12">
+          <h2>Methodology</h2>
+          <p>Our catalogue is based on the hierachical structure of the keywords and contains a variety of categories, including archival references.</p>
+           <a class="btn btn-warning" onclick="$('li:eq(2) a').tab('show');" role="button">Read more</a> 
+        </div>
+ <div class="col-lg-3 col-md-6 col-12">
+          <h2>About us</h2>
+          <p><b><mark class="red">SCC Resource Explorer</mark></b> is a project of the Max Planck Research Group “Governance of the Universal Church after the Council of Trent”. 
+</p>
+          <a class="btn btn-warning" href="https://www.lhlt.mpg.de/research-group/governance-of-the-universal-church-after-the-council-of-trent"; role="button">Go to our page</a>        
+        </div>
+        <div class="col-lg-3 col-md-6 col-12">
+          <h2>Programming code</h2>
+          <p><b><mark class="red">SCC Resource Explorer</mark></b> is an opensource web application, built with R and JavaScript programming languages. The code is available on our GitLab page.</p>
+          <a class="btn btn-warning" href="https://gitlab.com/"; role="button">Go to GitLab</a>        
+          </div>
+      </div>
+    </div>
+      <div id="about" class="about top_layer">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <p> </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
