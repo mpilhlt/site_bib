@@ -11,7 +11,8 @@
 
 
 
-<title>methodology</title>
+<title>dataset</title>
+
 <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -58,7 +59,6 @@ if (window.hljs) {
 
 
 
-<link rel="stylesheet" href="style.css" type="text/css" />
 
 
 
@@ -243,7 +243,7 @@ $(document).ready(function () {
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
+        <li>
   <a href="dataset.html">Dataset</a>
 </li>
 <li>
@@ -287,63 +287,54 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">Database</h1>
+
 </div>
 
 <div id="TOC">
 <ul>
-<li><a href="#methodology">Methodology</a></li>
-<li><a href="#challenges">Challenges</a></li>
-<li><a href="#resources-selection">Resources Selection</a></li>
+<li><a href="#content-of-the-database">Content of the Database</a></li>
+<li><a href="#how-we-collect-the-data">How we collect the data</a></li>
+<li><a href="#lear-more">Lear more</a></li>
 </ul>
 </div>
 
-<div id="methodology" class="section level2">
-<h2>Methodology</h2>
-<p>The SCC Explorer was developed for several reasons. First of all we
-aimed to provide not only classical bibliographical collection, but also
-make it more suitable for custom search. For this task, we developed a
-particular onthology for the large bibliographical dataset and organized
-in accordance with a hierarchical order that also reflect the hierarchy
-of the Congregation of the Council documents.</p>
+<p>SCC Resource Explorer is an interactive bibliographic database
+dedicated to the Congregation of the Council and the Council of Trent.
+The database is actually composed by more than 3.300 entries, related to
+historical and juridical aspects of the Congregation and Roman Curia.
+The database is constantly enriched with new entries in a collaborative
+way with the international scientific community. The web app offers
+advanced searching options, multiple graphic visualization of the search
+results and multiformat downloading opportunities of the data set.</p>
+<div id="content-of-the-database" class="section level2">
+<h2>Content of the Database</h2>
+<p>The core of this project is the bibliographical dataset, which
+consists of more than 3.300 names, including primary sources, books,
+articles, catalogues. This collection consists of the materials,
+selected by the research group members within their personal projects.
+The group page provides the further information about these topics.</p>
+<p>Therefore, these titles correspond to a large variety of subject:
+from the issues of the matrimonial law to the geographical concepts of
+the Congregation.</p>
 </div>
-<div id="challenges" class="section level2">
-<h2>Challenges</h2>
-<p>This project aims to provide an interactive searching opportunities
-among a large bibliographical dataset that could be used for any other
-library. Realization of this task faced several challenges as on the
-theoretical as on the technical level.</p>
-<p>First of all, we aimed to organize the large massive of titles, which
-one one hand, should demonstrate the logical structure of the
-Congregation of the Council related subjects, and on the other hand,
-this system should not be overwhelming for readers and for the machines.
-For this reason, among languages and frameworks we choose R, because of
-the libraries for both aesthetically pleasant visualisation of graphic
-representation and simplicity to compile and run everything inside the
-shiny framework. Secondly, the core of this application is a capacity to
-render the search results in the .bib format, which allows readers to
-add these titles into the library software. This manipulation became
-possible because of a double conversion of the original .bib file, which
-consists of the data, provided by the group members, to the data table
-and vice versa for rendering a file with selected inputs for
-downloading.</p>
-<p>Thirdly, we also aimed to provide the option for the quantitative
-research and graphic visualisation of the bibliographical tendencies.
-For this reason we used ggplot2 and data tables for makings interactive
-graphs. A user can set up several filters to particulate the data sample
-and choose a graphic representation among lines, bars, pies and
-dots.</p>
+<div id="how-we-collect-the-data" class="section level2">
+<h2>How we collect the data</h2>
+<p>In accordance with the hierarchical character of the Congregation of
+the Council’s subjects, our bibliography has the hierarchical structure
+with multi-level keywords.</p>
+<p>The keyword tree, which we used in the Smart Search and Graphs,
+consists of the several levels, from very general ones like ‘Roman
+Curia’, to specific words in order to provide the precise filters.</p>
+<p>The keywords sections are divided by colours for a comfortable visual
+navigation. In addition, the search options include the search by
+character and numeric custom inputs, such as author, title, publsher and
+year.</p>
 </div>
-<div id="resources-selection" class="section level2">
-<h2>Resources Selection</h2>
-<p>These resources were obtained within the personal research of the
-group members that include such subjects as canon law, constitutional
-law, Church history, historical geography, religious studies and many
-others.</p>
-<p>We decided to put the database into the framework of the Congregation
-of the Council and closely related subjects, which are strongly
-connected with the Congregation. Therefore, we do not include the
-general titles about the Church History or Canon Law, if they were not
-directly addressed to the Congregation’s competences.</p>
+<div id="lear-more" class="section level2">
+<h2>Lear more</h2>
+<p>Our application has many options and functions. The Documentation
+provides more information about functions and development</p>
 </div>
 
 
