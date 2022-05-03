@@ -32,6 +32,12 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="shared/ionrangeslider/js/ion.rangeSlider.min.js"></script>
+<script src="shared/strftime/strftime-min.js"></script>
+<link href="shared/ionrangeslider/css/ion.rangeSlider.css" rel="stylesheet" />
+<link href="shared/selectize/css/selectize.bootstrap3.css" rel="stylesheet" />
+<script src="shared/selectize/js/selectize.min.js"></script>
+<script src="shared/selectize/accessibility/js/selectize-plugin-a11y.min.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -295,23 +301,42 @@ $(document).ready(function () {
 <ul>
 <li><a href="#motivation">Motivation</a></li>
 <li><a href="#instruments">Instruments</a></li>
-<li><a href="#pages">Pages</a><ul>
+<li><a href="#pages">Pages</a>
+<ul>
 <li><a href="#smart-search">Smart Search</a></li>
 <li><a href="#advanced-search">Advanced Search</a></li>
 </ul></li>
 </ul>
 </div>
 
-<p>The dataset, which is used in this app, consists of 1.300 thematic books. It represents an export of an EndNote database in the bib format, transformed into a data frame. This convertion allows to present a catalogue with textual units as a data table for further manipulations in R.</p>
-<p>Therefore, the basic step of the development was a bib. To data frame transformation. For these needs CRAN has a package <code>bib2df</code>, which worked perfectly for this dataset.</p>
+<p>The dataset, which is used in this app, consists of 1.300 thematic
+books. It represents an export of an EndNote database in the bib format,
+transformed into a data frame. This convertion allows to present a
+catalogue with textual units as a data table for further manipulations
+in R.</p>
+<p>Therefore, the basic step of the development was a bib. To data frame
+transformation. For these needs CRAN has a package <code>bib2df</code>,
+which worked perfectly for this dataset.</p>
 <div id="motivation" class="section level2">
 <h2>Motivation</h2>
-<p>The aim of this project is to develop the application for the library catalogues with complext smart functions and graphic visualization. The application must be multi-platform, lightweight, fast and applicable for any thematic catalogue, regardless the subject. Therefore, in the future, the code of this app could be used for other specified libraries with relatively small dataset (about 10.000). However we are working on the performance improvement for the larger datasets.</p>
-<p>The main task of this project is visualization of the Congregation of the Council catalog with multiple search and visualization options.</p>
+<p>The aim of this project is to develop the application for the library
+catalogues with complext smart functions and graphic visualization. The
+application must be multi-platform, lightweight, fast and applicable for
+any thematic catalogue, regardless the subject. Therefore, in the
+future, the code of this app could be used for other specified libraries
+with relatively small dataset (about 10.000). However we are working on
+the performance improvement for the larger datasets.</p>
+<p>The main task of this project is visualization of the Congregation of
+the Council catalog with multiple search and visualization options.</p>
 </div>
 <div id="instruments" class="section level2">
 <h2>Instruments</h2>
-<p>The main language of this app is R. It’s set up because of simplicity of operations with data tables and rich graphic visualization via <code>ggplot2</code>. Active elements in this application are based on <code>shinyjs</code> or JavaScript itself. A visual theme is bootstrap 4 ‘Sandstone’, available as an option of the <code>shinythemes</code> package and bootstrap 4 css</p>
+<p>The main language of this app is R. It’s set up because of simplicity
+of operations with data tables and rich graphic visualization via
+<code>ggplot2</code>. Active elements in this application are based on
+<code>shinyjs</code> or JavaScript itself. A visual theme is bootstrap 4
+‘Sandstone’, available as an option of the <code>shinythemes</code>
+package and bootstrap 4 css</p>
 <p>All R and html files are compiled with shiny library.</p>
 <pre><code>library(shiny)
 library(shinyjs)
@@ -332,7 +357,9 @@ library(bib2df)</code></pre>
 <h1>Pages</h1>
 <div id="smart-search" class="section level2">
 <h2>Smart Search</h2>
-<p>This page provides the search manipulations with the data. It consists of the sidebar layout with filters and data table selections.</p>
+<p>This page provides the search manipulations with the data. It
+consists of the sidebar layout with filters and data table
+selections.</p>
 <p>The filters are divided by the general search and advanced search</p>
 <div class="col-sm-6">
 <div class="box">
@@ -350,7 +377,13 @@ library(bib2df)</code></pre>
 </div>
 </div>
 </div>
-<p>“Everything in the database” provides a search among all titles, including dates, names or any other elements. The input can include character or numeric symbols and will give all possible results. This element is based on the proxy data table - it is needed for updating already existed data table instead of additional rendering. In this case, in the server side we use <code>observeEvent()</code> and function <code>updateSearch()</code> from <code>DT</code>:</p>
+<p>“Everything in the database” provides a search among all titles,
+including dates, names or any other elements. The input can include
+character or numeric symbols and will give all possible results. This
+element is based on the proxy data table - it is needed for updating
+already existed data table instead of additional rendering. In this
+case, in the server side we use <code>observeEvent()</code> and function
+<code>updateSearch()</code> from <code>DT</code>:</p>
 <pre><code>ui 
 textInput(&quot;search&quot;, &quot;Everything in the database&quot;)
 
@@ -363,7 +396,10 @@ updateSearch(DTproxy, keywords = list(global = input$search, columns = NULL))
 </div>
 <div id="advanced-search" class="section level2">
 <h2>Advanced Search</h2>
-<p>You can also combine several categories for the advanced search. Since the basic search does not reflect the structure of the Congregation, but mechanically show all possible results, we created an advanced search option, which includes several filters.</p>
+<p>You can also combine several categories for the advanced search.
+Since the basic search does not reflect the structure of the
+Congregation, but mechanically show all possible results, we created an
+advanced search option, which includes several filters.</p>
 <div class="col-sm-6">
 <div class="box">
 <div class="box-body">
@@ -376,7 +412,15 @@ updateSearch(DTproxy, keywords = list(global = input$search, columns = NULL))
 </div>
 </div>
 </div>
-<p>The slider input allows to cut the possible dataset by the year of publication. Since the slider can operate only with the natural numbers (i.e. 2000, but not a range 2000-2001), all selection is made by the first year in the case of double numbers. However in the data table there is an original EndNote column ‘YEAR’, which provides the original date of publication. In this case we should take the minimum <code>min()</code> and maximum <code>max()</code> possible numbers. Then in the server part this element should be included inside a reactive subset, which combines keywords and slider. The code for this part:</p>
+<p>The slider input allows to cut the possible dataset by the year of
+publication. Since the slider can operate only with the natural numbers
+(i.e. 2000, but not a range 2000-2001), all selection is made by the
+first year in the case of double numbers. However in the data table
+there is an original EndNote column ‘YEAR’, which provides the original
+date of publication. In this case we should take the minimum
+<code>min()</code> and maximum <code>max()</code> possible numbers. Then
+in the server part this element should be included inside a reactive
+subset, which combines keywords and slider. The code for this part:</p>
 <pre><code>ui
 h4(&quot;Time period&quot;),
 sliderInput(&quot;slider&quot;, label=(&quot;Choose particular years of the bibliography&quot;),
