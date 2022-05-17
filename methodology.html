@@ -12,6 +12,7 @@
 
 
 <title>methodology</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -86,6 +87,320 @@ summary {
 pre code {
   padding: 0;
 }
+
+img
+{
+	max-width: 100%;
+}
+
+
+.image-left, .image-right
+{
+	margin: 1em 0;
+}
+
+@media (min-width: 20em)
+{
+	.image-left, .image-right
+	{
+		display: flex;
+		align-items: center;
+	}
+
+	.image-left img
+	{
+		margin-right: 1em;
+		float: left; /* fallback */
+	}
+
+	.image-right img
+	{
+		order: 1;
+		margin-left: 1em;
+		float: right; /* fallback */
+	}
+	
+	/* clearfix for fallback */
+	.image-left::after,
+	.image-right::after
+	{
+		content: "";
+  	display: block;
+		clear: both;
+	}
+}
+
+@media (min-width: 30em)
+{
+	.image-left img, .image-right img
+	{
+		flex-shrink: 0;
+	}
+}
+
+/* Demo Code: */
+body {
+	font-family: 'Open Sans', arial, sans-serif;
+	color: #333;
+	font-size: 14px;
+}
+.projcard-container {
+	margin: 50px 0;
+}
+
+/* Actual Code: */
+.projcard-container,
+.projcard-container * {
+	box-sizing: border-box;
+}
+.projcard-container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+}
+.projcard {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	margin-bottom: 40px;
+	border-radius: 10px;
+	background-color: #fff;
+	border: 2px solid #ddd;
+	font-size: 18px;
+	overflow: hidden;
+	cursor: pointer;
+	box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
+	transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.projcard:hover {
+	box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
+	transform: translate(0px, -3px);
+}
+.projcard::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(-70deg, #424242, transparent 50%);
+	opacity: 0.07;
+}
+.projcard:nth-child(2n)::before {
+	background-image: linear-gradient(-250deg, #424242, transparent 50%);
+}
+.projcard-innerbox {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.projcard-img {
+	position: absolute;
+	height: 300px;
+	width: 400px;
+	top: 0;
+	left: 0;
+	transition: transform 0.2s ease;
+}
+.projcard:nth-child(2n) .projcard-img {
+	left: initial;
+	right: 0;
+}
+.projcard:hover .projcard-img {
+	transform: scale(1.05);
+}
+.projcard:hover .projcard-bar {
+	width: 70px;
+}
+.projcard-textbox {
+	position: absolute;
+	top: 7%;
+	bottom: 7%;
+	left: 430px;
+	width: calc(100% - 470px);
+	font-size: 17px;
+}
+.projcard:nth-child(2n) .projcard-textbox {
+	left: initial;
+	right: 430px;
+}
+.projcard-textbox::before,
+.projcard-textbox::after {
+	content: "";
+	position: absolute;
+	display: block;
+	background: #ff0000bb;
+	background: #fff;
+	top: -20%;
+	left: -55px;
+	height: 140%;
+	width: 60px;
+	transform: rotate(1deg);
+}
+.projcard:nth-child(2n) .projcard-textbox::before {
+	display: none;
+}
+.projcard-textbox::after {
+	display: none;
+	left: initial;
+	right: -55px;
+}
+.projcard:nth-child(2n) .projcard-textbox::after {
+	display: block;
+}
+.projcard-textbox * {
+	position: relative;
+}
+.projcard-title {
+	font-family: 'Voces', 'Open Sans', arial, sans-serif;
+	font-size: 24px;
+}
+.projcard-subtitle {
+	font-family: 'Voces', 'Open Sans', arial, sans-serif;
+	color: #888;
+}
+.projcard-bar {
+	left: -2px;
+	width: 50px;
+	height: 5px;
+	margin: 10px 0;
+	border-radius: 5px;
+	background-color: #424242;
+	transition: width 0.2s ease;
+}
+.projcard-blue .projcard-bar { background-color: #0088FF; }
+.projcard-blue::before { background-image: linear-gradient(-70deg, #0088FF, transparent 50%); }
+.projcard-blue:nth-child(2n)::before { background-image: linear-gradient(-250deg, #0088FF, transparent 50%); }
+.projcard-red .projcard-bar { background-color: #D62F1F; }
+.projcard-red::before { background-image: linear-gradient(-70deg, #D62F1F, transparent 50%); }
+.projcard-red:nth-child(2n)::before { background-image: linear-gradient(-250deg, #D62F1F, transparent 50%); }
+.projcard-green .projcard-bar { background-color: #40BD00; }
+.projcard-green::before { background-image: linear-gradient(-70deg, #40BD00, transparent 50%); }
+.projcard-green:nth-child(2n)::before { background-image: linear-gradient(-250deg, #40BD00, transparent 50%); }
+.projcard-yellow .projcard-bar { background-color: #F5AF41; }
+.projcard-yellow::before { background-image: linear-gradient(-70deg, #F5AF41, transparent 50%); }
+.projcard-yellow:nth-child(2n)::before { background-image: linear-gradient(-250deg, #F5AF41, transparent 50%); }
+.projcard-orange .projcard-bar { background-color: #FF5722; }
+.projcard-orange::before { background-image: linear-gradient(-70deg, #FF5722, transparent 50%); }
+.projcard-orange:nth-child(2n)::before { background-image: linear-gradient(-250deg, #FF5722, transparent 50%); }
+.projcard-brown .projcard-bar { background-color: #C49863; }
+.projcard-brown::before { background-image: linear-gradient(-70deg, #C49863, transparent 50%); }
+.projcard-brown:nth-child(2n)::before { background-image: linear-gradient(-250deg, #C49863, transparent 50%); }
+.projcard-grey .projcard-bar { background-color: #424242; }
+.projcard-grey::before { background-image: linear-gradient(-70deg, #424242, transparent 50%); }
+.projcard-grey:nth-child(2n)::before { background-image: linear-gradient(-250deg, #424242, transparent 50%); }
+.projcard-customcolor .projcard-bar { background-color: var(--projcard-color); }
+.projcard-customcolor::before { background-image: linear-gradient(-70deg, var(--projcard-color), transparent 50%); }
+.projcard-customcolor:nth-child(2n)::before { background-image: linear-gradient(-250deg, var(--projcard-color), transparent 50%); }
+.projcard-description {
+	z-index: 10;
+	font-size: 15px;
+	color: #424242;
+	height: 125px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.projcard-tagbox {
+	position: absolute;
+	bottom: 3%;
+	font-size: 14px;
+	cursor: default;
+	user-select: none;
+	pointer-events: none;
+}
+.projcard-tag {
+	display: inline-block;
+	background: #E0E0E0;
+	color: #777;
+	border-radius: 3px 0 0 3px;
+	line-height: 26px;
+	padding: 0 10px 0 23px;
+	position: relative;
+	margin-right: 20px;
+	cursor: default;
+	user-select: none;
+	transition: color 0.2s;
+}
+.projcard-tag::before {
+	content: '';
+	position: absolute;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+	height: 6px;
+	left: 10px;
+	width: 6px;
+	top: 10px;
+}
+.projcard-tag::after {
+	content: '';
+	position: absolute;
+	border-bottom: 13px solid transparent;
+	border-left: 10px solid #E0E0E0;
+	border-top: 13px solid transparent;
+	right: -10px;
+	top: 0;
+}
+h2, details{
+  display:inline;
+}
+
+details {
+  position:relative;
+  height: auto !important;
+}
+details summary {
+  display:block;
+  cursor: pointer;
+  color: red;
+}
+details summary:focus {
+  outline:none;
+}
+details[open] {
+  display:block;
+  padding-bottom:25px;
+  padding-top:10px;
+  animation: open .2s linear;
+}
+details[open] summary {
+  position:absolute;
+  bottom: 0;
+  left:0;
+}
+
+details #open{padding-left:5px;text-align:middle;}
+details #open:after{
+    display: inline-block;
+    position:relative;
+    top: -3px;
+    padding-left: 8px;
+    content: "\00bb";
+    transform: rotate(10deg);
+}
+details[open] #open{display:none;}
+details #close{display:none;}
+details[open] #close{display:block;}
+
+::-webkit-details-marker {display: none;}
+
+
+
+
+
+@keyframes open {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 </style>
 
 
@@ -127,6 +442,19 @@ pre code {
   margin-left: 10px;
   border-radius: 6px 0 6px 6px;
 }
+
+ul.menu {
+  padding: 10px 16px;
+  list-style: none;
+    font-size: 18px;
+    
+}
+
+ul.menu li a:hover {
+  color: brown;
+  text-decoration: underline;
+}
+
 </style>
 
 <script type="text/javascript">
@@ -214,6 +542,10 @@ $(document).ready(function () {
 .tabset-dropdown > .nav-tabs > li {
   display: none;
 }
+
+h2.head {
+  text-align: center;
+}
        
        
 </style>
@@ -288,18 +620,17 @@ $(document).ready(function () {
 </div><!--/.navbar -->
 
 <div id="header">
-
-
-
 </div>
-<h2>Methodology</h2>
+
+<h2 style="text-align: center;">Methodology</h2>
+<hr>
 <div id="TOC">
-<ul>
+<ul class="menu">
 <li><a href="#challenges">Challenges</a></li>
 <li><a href="#resources-selection">Resources Selection</a></li>
 </ul>
 </div>
-
+<hr>
 <div>
 <p>The SCC Explorer was developed for several reasons. First of all we
 aimed to provide not only classical bibliographical collection, but also
@@ -308,49 +639,66 @@ particular onthology for the large bibliographical dataset and organized
 in accordance with a hierarchical order that also reflect the hierarchy
 of the Congregation of the Council documents.</p>
 </div>
+<hr>
+
+<div class="projcard-container">
+  
 <div id="challenges" class="section level2">
-<h2>Challenges</h2>
-<p>This project aims to provide an interactive searching opportunities
+
+	<div class="projcard projcard-brown">
+		<div class="projcard-innerbox">
+			<img class="projcard-img" src="method1.jpg" alt="" />
+			<div class="projcard-textbox">
+				<div class="projcard-title">Challenges</div>
+				<div class="projcard-subtitle">Problems and their solutions</div>
+				<div class="projcard-bar"></div>
+				<div class="projcard-description"><p>
+				  This project aims to provide an interactive searching opportunities
 among a large bibliographical dataset that could be used for any other
 library. Realization of this task faced several challenges as on the
-theoretical as on the technical level.</p>
-<p>First of all, we aimed to organize the large massive of titles, which
-one one hand, should demonstrate the logical structure of the
-Congregation of the Council related subjects, and on the other hand,
-this system should not be overwhelming for readers and for the machines.
-For this reason, among languages and frameworks we choose R, because of
-the libraries for both aesthetically pleasant visualisation of graphic
-representation and simplicity to compile and run everything inside the
-shiny framework. Secondly, the core of this application is a capacity to
-render the search results in the .bib format, which allows readers to
-add these titles into the library software. This manipulation became
-possible because of a double conversion of the original .bib file, which
-consists of the data, provided by the group members, to the data table
-and vice versa for rendering a file with selected inputs for
-downloading.</p>
-<p>Thirdly, we also aimed to provide the option for the quantitative
-research and graphic visualisation of the bibliographical tendencies.
-For this reason we used ggplot2 and data tables for makings interactive
-graphs. A user can set up several filters to particulate the data sample
-and choose a graphic representation among lines, bars, pies and
-dots.</p>
+theoretical as on the technical level.</p></div>
+<details>
+ <summary>
+   <span id="open">read more</span> 
+   <span id="close">close</span> 
+ </summary>
+   <p>
+First of all, we aimed to organize the large massive of titles, which one one hand, should demonstrate the logical structure of the Congregation of the Council related subjects, and on the other hand, this system should not be overwhelming for readers and for the machines. For this reason, among languages and frameworks we choose R, because of the libraries for both aesthetically pleasant visualisation of graphic representation and simplicity to compile and run everything inside the shiny framework. Secondly, the core of this application is a capacity to render the search results in the .bib format, which allows readers to add these titles into the library software. This manipulation became possible because of a double conversion of the original .bib file, which consists of the data, provided by the group members, to the data table and vice versa for rendering a file with selected inputs for downloading.
+  </p>
+   <p>
+Thirdly, we also aimed to provide the option for the quantitative research and graphic visualisation of the bibliographical tendencies. For this reason we used ggplot2 and data tables for makings interactive graphs. A user can set up several filters to particulate the data sample and choose a graphic representation among lines, bars, pies and dots.
+
+   </p>
+</details>
 </div>
+			</div>
+		</div>
+</div>
+	
 <div id="resources-selection" class="section level2">
-<h2>Resources Selection</h2>
-<p>These resources were obtained within the personal research of the
-group members that include such subjects as canon law, constitutional
-law, Church history, historical geography, religious studies and many
-others.</p>
-<p>We decided to put the database into the framework of the Congregation
-of the Council and closely related subjects, which are strongly
-connected with the Congregation. Therefore, we do not include the
-general titles about the Church History or Canon Law, if they were not
-directly addressed to the Congregation’s competences.</p>
+	<div class="projcard projcard-brown">
+		<div class="projcard-innerbox">
+			<img class="projcard-img" src="method2.jpg" alt="" />
+			<div class="projcard-textbox">
+				<div class="projcard-title">Resources Selection</div>
+				<div class="projcard-subtitle">Resources we use</div>
+				<div class="projcard-bar"></div>
+				<div class="projcard-description"><p>
+These resources were obtained within the personal research of the group members that include such subjects as canon law, constitutional law, Church history, historical geography, religious studies and many others.</p></div>
+<details>
+ <summary>
+   <span id="open">read more</span> 
+   <span id="close">close</span> 
+ </summary>
+   <p>
+We decided to put the database into the framework of the Congregation of the Council and closely related subjects, which are strongly connected with the Congregation. Therefore, we do not include the general titles about the Church History or Canon Law, if they were not directly addressed to the Congregation's competences.  </p>
+
+</details>
 </div>
+			</div>
+		</div>
 
-
-
-
+</div>
 </div>
 
 <script>
