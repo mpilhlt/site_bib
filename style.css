@@ -410,7 +410,8 @@ section {
 P {
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 16px;
+  font-size: 18px;
+  font-family:Helvetica;
 }
 
 H1 {
