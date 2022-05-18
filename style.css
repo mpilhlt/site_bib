@@ -332,7 +332,6 @@ details[open] #close{display:block;}
 
 
 
-
 @keyframes open {
   0% {
     opacity: 0;
@@ -465,4 +464,10 @@ figure img:hover {
     .column {
       flex: 0 0 calc(100%/4 - 40px);
   }
+}
+
+
+.mark {
+  color: red; 
+  background-color:transparent;
 }
