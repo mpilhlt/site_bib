@@ -12,7 +12,7 @@
 
 
 <title>dataset</title>
-
+<link rel="stylesheet" type="text/css" href="style.css">
 <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -56,80 +56,6 @@ if (window.hljs) {
 </script>
 
 
-
-
-
-
-
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-img {
-  max-width:100%;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-summary {
-  display: list-item;
-}
-pre code {
-  padding: 0;
-}
-</style>
-
-
-<style type="text/css">
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #adb5bd;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
-
-</style>
-
 <script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
@@ -160,110 +86,6 @@ $(document).ready(function () {
   document.head.appendChild(style);
 });
 </script>
-
-<!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-
-
-
-.image-left, .image-right
-{
-	margin: 1em 0;
-}
-
-@media (min-width: 20em)
-{
-	.image-left, .image-right
-	{
-		display: flex;
-		align-items: center;
-	}
-
-	.image-left img
-	{
-		margin-right: 1em;
-		float: left; /* fallback */
-	}
-
-	.image-right img
-	{
-		order: 1;
-		margin-left: 1em;
-		float: right; /* fallback */
-	}
-	
-	/* clearfix for fallback */
-	.image-left::after,
-	.image-right::after
-	{
-		content: "";
-  	display: block;
-		clear: both;
-	}
-}
-
-@media (min-width: 30em)
-{
-	.image-left img, .image-right img
-	{
-		flex-shrink: 0;
-	}
-}
-</style>
-
-<!-- code folding -->
 
 
 
@@ -336,12 +158,11 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Database</h1>
+<h2 style="text-align: center;">Database</h2>
 
-</div>
-
+<hr>
 <div id="TOC">
-<ul>
+<ul class="menu">
 <li><a href="#content-of-the-database">Content of the Database</a></li>
 <li><a href="#how-we-collect-the-data">How we collect the data</a></li>
 <li><a href="#lear-more">Lear more</a></li>
@@ -356,33 +177,58 @@ The database is constantly enriched with new entries in a collaborative
 way with the international scientific community. The web app offers
 advanced searching options, multiple graphic visualization of the search
 results and multiformat downloading opportunities of the data set.</p>
-<div id="content-of-the-database" class="section level2">
-<h2>Content of the Database</h2>
 
-<div class="image-right">
-	<img src="database1.jpg" alt="" style="width:50%;height:50%;">
-	<div>
-	  
-<p>The core of this project is the bibliographical dataset, which
+
+
+<div class="projcard-container">
+  
+<div id="content-of-the-database" class="section level2">
+
+	<div class="projcard projcard-brown">
+		<div class="projcard-innerbox">
+			<img class="projcard-img" src="database1.jpg" alt="" />
+			<div class="projcard-textbox">
+				<div class="projcard-title">Content of the Database</div>
+				<div class="projcard-subtitle">Texts and more</div>
+				<div class="projcard-bar"></div>
+				<div class="projcard-description"><p>The core of this project is the bibliographical dataset, which
 consists of more than 3.300 names, including primary sources, books,
 articles, catalogues. This collection consists of the materials,
 selected by the research group members within their personal projects.
 The group page provides the further information about these topics.</p>
+</div>
+<details>
+ <summary>
+   <span id="open">read more</span> 
+   <span id="close">close</span> 
+ </summary>
 <p>Therefore, these titles correspond to a large variety of subject:
 from the issues of the matrimonial law to the geographical concepts of
 the Congregation.</p>
+</details>
 </div>
+			</div>
+		</div>
 </div>
+	
 <div id="how-we-collect-the-data" class="section level2">
-<h2>How we collect the data</h2>
-
-<div class="image-right">
-	<img src="net2.png" alt="" style="width:50%;height:50%;">
-	<div>
-	  
-<p>In accordance with the hierarchical character of the Congregation of
+	<div class="projcard projcard-brown">
+		<div class="projcard-innerbox">
+			<img class="projcard-img" src="net2.png" alt="" />
+			<div class="projcard-textbox">
+				<div class="projcard-title">How we collect the data</div>
+				<div class="projcard-subtitle">Approaches and methods</div>
+				<div class="projcard-bar"></div>
+				<div class="projcard-description">
+				<p>In accordance with the hierarchical character of the Congregation of
 the Council’s subjects, our bibliography has the hierarchical structure
 with multi-level keywords.</p>
+        </div>
+<details>
+ <summary>
+   <span id="open">read more</span> 
+   <span id="close">close</span> 
+ </summary>
 <p>The keyword tree, which we used in the Smart Search and Graphs,
 consists of the several levels, from very general ones like ‘Roman
 Curia’, to specific words in order to provide the precise filters.</p>
@@ -390,22 +236,41 @@ Curia’, to specific words in order to provide the precise filters.</p>
 navigation. In addition, the search options include the search by
 character and numeric custom inputs, such as author, title, publsher and
 year.</p>
+
+</details>
 </div>
+			</div>
+		</div>
+
 </div>
+
+	
 <div id="lear-more" class="section level2">
-<h2>Lear more</h2>
+	<div class="projcard projcard-brown">
+		<div class="projcard-innerbox">
+			<img class="projcard-img" src="data.jpg" alt="" />
+			<div class="projcard-textbox">
+				<div class="projcard-title">Learn more</div>
+				<div class="projcard-subtitle">Guide and Documentation</div>
+				<div class="projcard-bar"></div>
+				<div class="projcard-description">
+				<p>Our application has many options and functions. The Documentation
+provides more information about functions and development.</p>
+        </div>
+<details>
+ <summary>
+   <span id="open">read more</span> 
+   <span id="close">close</span> 
+ </summary>
 
-<div class="image-right">
-	<img src="data.jpg" alt="" style="width:50%;height:50%;">
-	<div>
-	  
-<p>Our application has many options and functions. The Documentation
-provides more information about functions and development</p>
+
+</details>
+</div>
+			</div>
+		</div>
+
 </div>
 </div>
-
-
-
 
 </div>
 
