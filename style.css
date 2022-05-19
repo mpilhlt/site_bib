@@ -488,6 +488,17 @@ figure img:hover {
 }
 
 
+.menu li a{
+    background-color: white;
+    color: #b77000 !important;
+}
+
+.menu li a:hover{
+    background-color: white;
+    color: #EAB126 !important;
+}
+
+
 .navbar li a:hover{
     background-color: #EAB126 !important;
     background: #b77000 !important;
@@ -511,7 +522,7 @@ figure img:hover {
 
 .navbar.navbar-inverse .dropdown-menu > li > a:hover {
   color: #EAB126 !important;
-      background-color: white !important;
+  background-color: white !important;
 
 }
 
