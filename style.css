@@ -478,15 +478,18 @@ figure img:hover {
       border:none;
     }
     
-
+.navbar{
+      background-color:#bf9000 !important;
+      border:none;
+    }
+    
 .navbar a {
   float: left;
   color: #eeebd3 !important;
   text-decoration: none;
   border:none;
-
+  background-color:transparent !important;
 }
-
 
 .menu li a{
     background-color: white;
