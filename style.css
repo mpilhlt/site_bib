@@ -467,54 +467,37 @@ figure img:hover {
   }
 }
 
+.menu li a{
+    background-color: white;
+    color: #b77000;
+}
+
+.menu li a:hover{
+    background-color: white;
+    color: #EAB126;
+}
+
+
 
 .mark {
   color: red; 
   background-color:transparent;
 }
 
-.navbar-inverse {
-      background-color:#bf9000 !important;
+.navbar.navbar-inverse {
+      background-color:#bf9000;
       border:none;
     }
     
-.navbar{
-      background-color:#bf9000 !important;
-      border:none;
-    }
-    
-.navbar a {
-  float: left;
-  color: #eeebd3 !important;
-  text-decoration: none;
-  border:none;
-  background-color:transparent !important;
+.navbar-inverse .navbar-nav>li>a{
+  color:#eeebd3;
 }
 
-.menu li a{
-    background-color: white;
-    color: #b77000 !important;
-}
-
-.menu li a:hover{
-    background-color: white;
-    color: #EAB126 !important;
-}
-
-
-.navbar li a:hover{
-    background-color: #EAB126 !important;
-    background: #b77000 !important;
-    color: #fff2cc !important;
-}
-
-.navbar li a:focus {
-  background-color: #EAB126 !important;
-}
-
-.navbar li a:active {
-  background-color: #EAB126 !important;
-}
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>li>a:focus{
+  color:#fff2cc;background-color:#EAB126}
+.navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-inverse .navbar-nav>.active>a:focus{color:#ffffff;background-color:#EAB126}
 
 
 .navbar.navbar-inverse .dropdown-menu > li > a {
@@ -527,5 +510,8 @@ figure img:hover {
   color: #EAB126 !important;
   background-color: white !important;
 
+}
+.navbar .navbar-toggle .icon-bar {
+  background-color: #000 !important;
 }
 
