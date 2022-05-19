@@ -472,3 +472,46 @@ figure img:hover {
   color: red; 
   background-color:transparent;
 }
+
+.navbar-inverse {
+      background-color:#bf9000 !important;
+      border:none;
+    }
+    
+
+.navbar a {
+  float: left;
+  color: #eeebd3 !important;
+  text-decoration: none;
+  border:none;
+
+}
+
+
+.navbar li a:hover{
+    background-color: #EAB126 !important;
+    background: #b77000 !important;
+    color: #fff2cc !important;
+}
+
+.navbar li a:focus {
+  background-color: #EAB126 !important;
+}
+
+.navbar li a:active {
+  background-color: #EAB126 !important;
+}
+
+
+.navbar.navbar-inverse .dropdown-menu > li > a {
+  color: #666d70 !important;
+    background-color: white !important;
+
+}
+
+.navbar.navbar-inverse .dropdown-menu > li > a:hover {
+  color: #EAB126 !important;
+      background-color: white !important;
+
+}
+
