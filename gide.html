@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>guide</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+         <a class="navbar-brand" href="index.html"class='image'> 
+       <img src='img/fulllogo.png', style='margin-top: -17px; margin-bottom: -5px; padding-right:5px; 
+                                       padding-top:5px; padding-bottom: -40px', height = 50></a>
+         </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="dataset.html">Dataset</a>
+</li>
+<li>
+  <a href="methodology.html">Methodology</a>
+</li>
+<li>
+  <a href="search_data.html">Search Data</a>
+</li>
+<li>
+  <a href="graph.html">Build Graphs</a>
+</li>
+<li>
+  <a href="get_in.html">Get involved</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-gear"></span>
+     
+    Documentation and Guide
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="docs.html">Documentation</a>
+    </li>
+    <li>
+      <a href="gide.html">Guide</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+<div id="header">
+  <h1 class="col text-center">Guide</h1>
+  <hr>
+  <br>
+</div>
+
+<div id="TOC">
+<ul class="menu">
+<li><a href="#smart-search">Smart Search</a></li>
+<li><a href="#keywords">Keywords</a></li>
+<li><a href="#build-graphs">Build Graphs</a></li>
+<li><a href="#graph-desk">Graph Desk</a></li>
+</ul>
+</div>
+
+<p>In addition to the Smart Search, the app contains graphic part, which provides an opportunity to build graphs on the basis of bibliographical datasets and keywords.
+</p>
+
+
+
+<div class="projcard-container">
+  
+<div id="smart-search" class="section level2">
+
+	<div class="projcard projcard-brown">
+		<div class="projcard-innerbox-gif">
+		<div class="projcard-title">Smart Search</div>
+				<div class="projcard-subtitle"></div>
+				<div class="projcard-bar"></div>
+		 <img class="projcard-gif" src="img/gif/search_1.gif" alt="" />
+		 <img class="projcard-gif" src="img/gif/search_img.png" alt="" />
+			<div class="projcard-textbox-gif">
+				<div class="projcard-description"><p>This application offers variety of searching options. Firstly, choose the basic dataset. There are two options: a raw database with all bibliographical inputs and a database with keywords. Both databases support search bars - AUTHOR, TITLE, PUBLISHER, YEAR, PLACE, LANGAUGE, and a general search bar, which proceeds a search among all columns in the dataset.
+</p>
+</div>
+<details>
+ <summary>
+   <span id="open">read more</span> 
+   <span id="close">close</span> 
+ </summary>
+<p>Search bars support multiple inputs, i.e. you can select 'a', 'b' (...) and combine them with other inputs in the search bars.Time slider helps to limit a period in which the search is proceeded. After setting the time period, all search bars will be updated in accordance with possible options.</p>
+</details>
+</div>
+			</div>
+		</div>
+</div>
+
+
+
+	
+	
+<div id="keywords" class="section level2">
+	<div class="projcard projcard-brown">
+		<div class="projcard-innerbox-gif">
+		<div class="projcard-title">Keywords</div>
+				<div class="projcard-subtitle"></div>
+				<div class="projcard-bar"></div>
+		 <img class="projcard-gif" src="img/gif/search_2.gif" alt="" />
+			<div class="projcard-textbox-gif">
+				<div class="projcard-description">
+				<p>Keywords. At this moment there are 190 keywords. By default, they all are selected. A bottom 'select all' allows to select or deselect all of them. Click on the box in order to customize the available dataset.</p>
+        </div>
+<details>
+ <summary>
+   <span id="open">read more</span> 
+   <span id="close">close</span> 
+ </summary>
+<p>Results might be saved in .bib format.</p>
+
+</details>
+</div>
+			</div>
+		</div>
+
+</div>
+
+
+	
+<div id="build-graphs" class="section level3">
+	<div class="projcard projcard-brown">
+		<div class="projcard-innerbox-gif">
+		<div class="projcard-title">Build Graphs</div>
+				<div class="projcard-subtitle"></div>
+				<div class="projcard-bar"></div>
+		 <img class="projcard-gif" src="img/gif/filters.gif" alt="" />
+			<div class="projcard-textbox-gif">
+				<div class="projcard-description">
+				<p>At this moment, Filters contain options for choosing a type of the graph and keywords tree, which works in the same way as in the Smart Search. A switcher between the raw database and a database with keywords works accordingly the Smart Search. </p>
+        </div>
+<details>
+ <summary>
+   <span id="open">read more</span> 
+   <span id="close">close</span> 
+ </summary>
+<p></p>
+
+</details>
+</div>
+			</div>
+		</div>
+
+</div>
+
+	
+<div id="graph-desk" class="section level4">
+	<div class="projcard projcard-brown">
+		<div class="projcard-innerbox-gif">
+		<div class="projcard-title">Graph desk</div>
+				<div class="projcard-subtitle"></div>
+				<div class="projcard-bar"></div>
+		 <img class="projcard-gif" src="img/gif/graph.gif" alt="" />
+			<div class="projcard-textbox-gif">
+				<div class="projcard-description">
+				<p>The desk of a graphic part is interactive — dots and bars can be selected by clicking. In accordance with a selected area, all inputs will appear in the format of data table. This data table can be saved via 'Download' button.</p>
+        </div>
+<details>
+ <summary>
+   <span id="open">read more</span> 
+   <span id="close">close</span> 
+ </summary>
+<p>Results might be saved in .bib format.</p>
+
+</details>
+</div>
+			</div>
+		</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

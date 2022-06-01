@@ -159,6 +159,43 @@ body {
 	left: 0;
 	transition: transform 0.2s ease;
 }
+
+.projcard-innerbox-gif {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	bottom: 0;
+	left: 20px;
+		height:auto;
+
+}
+
+
+
+.projcard-gif {
+	position: absolute;
+	height: 280px;
+	width: 450px;
+	top: 20;
+	left: 0;
+	transition: transform 0.2s ease;
+}
+
+.projcard-gif:hover {
+  opacity:0;
+}
+
+.projcard-textbox-gif {
+	position: absolute;
+	top: 20%;
+	bottom: 7%;
+	left: 470px;
+	width: calc(100% - 500px);
+	font-size: 17px;
+		height:auto;
+}
+
+
 .projcard:nth-child(2n) .projcard-img {
 	left: initial;
 	right: 0;
@@ -179,6 +216,8 @@ body {
 		height:auto;
 
 }
+
+
 .projcard:nth-child(2n) .projcard-textbox {
 	left: initial;
 	right: 430px;
@@ -566,5 +605,6 @@ figure img:hover {
   border: 1px solid #ddd;
   border-radius: .25em;
 }
+
 
 
